@@ -43,12 +43,11 @@ public class ChkPwd {
 				typedPwd[i] = sc.nextInt();
 			}
 			
-			int diff = 0, accept = 0, res = 0;
+			int diff = 0, res = 0;
 			for (int i = 0; i < N; i++) {
 				if (truePwd[i] != typedPwd[i]) {
 					diff++;
 					if (diff < 2 && checkAccepted(truePwd[i], typedPwd[i])) {
-						accept++;
 						res = i + 1;
 					} else {
 						res = -1;
